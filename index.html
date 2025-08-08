@@ -1,13 +1,3 @@
-<?php
-// Guardar la visita en un archivo de texto
-$ip = $_SERVER['REMOTE_ADDR'];
-$fecha = date('Y-m-d H:i:s');
-$registro = "Visita desde $ip a las $fecha\n";
-file_put_contents('visitas.txt', $registro, FILE_APPEND);
-
-// Llamar al archivo que envía el correo (sin mostrar nada)
-include 'enviar_correo.php';
-?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
